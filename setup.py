@@ -104,6 +104,18 @@ modules = [
 setup(
     name='darknetpy',
     version='1.0',
+    author='Daniel Gatis Carrazzoni',
+    author_email='danielgatis@gmail.com',
+    url='https://github.com/danielgatis/darknetpy',
+    license='BSD License',
+    platforms=['Linux'],
+    classifiers=[
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: Linux',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3'
+    ],
     python_requires='>=3',
     packages=find_packages(exclude=['tests.py']),
     ext_modules=modules,

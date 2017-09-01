@@ -1,3 +1,5 @@
 __pycache__/
 env/
+darknetpy.egg-info/
+dist/
 *.pyc
