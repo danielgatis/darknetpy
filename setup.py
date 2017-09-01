@@ -103,7 +103,7 @@ modules = [
 
 setup(
     name='darknetpy',
-    version='1.2',
+    version='1.5',
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',
     url='https://github.com/danielgatis/darknetpy',
