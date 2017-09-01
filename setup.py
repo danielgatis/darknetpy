@@ -103,7 +103,7 @@ modules = [
 
 setup(
     name='darknetpy',
-    version='1.5',
+    version='1.7',
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',
     url='https://github.com/danielgatis/darknetpy',
@@ -120,4 +120,6 @@ setup(
     packages=find_packages(exclude=['tests.py']),
     ext_modules=modules,
     cmdclass={'build_ext': BuildExtCommand},
+    include_package_data=True,
+    zip_safe=False
 )
