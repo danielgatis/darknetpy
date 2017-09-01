@@ -10,6 +10,11 @@ from setuptools import Extension, find_packages, setup
 from setuptools.command.build_ext import build_ext
 
 
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
+
 def sed(pattern, replace, source, dest=None, count=0):
     fin = open(source, 'r')
     num_replaced = count
@@ -103,7 +108,8 @@ modules = [
 
 setup(
     name='darknetpy',
-    version='1.7',
+    version='1.8',
+    long_description=readme(),
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',
     url='https://github.com/danielgatis/darknetpy',
