@@ -101,7 +101,7 @@ modules = [
     Extension(
         name='darknetpy.detector',
         sources=['extension/detector.c'],
-        extra_compile_args=['-fPIC']
+        extra_compile_args=['-fPIC', '-std=c99']
     )
 ]
 
