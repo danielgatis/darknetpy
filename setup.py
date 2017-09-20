@@ -108,7 +108,7 @@ modules = [
 
 setup(
     name='darknetpy',
-    version='1.9',
+    version='2.0',
     long_description=readme(),
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',

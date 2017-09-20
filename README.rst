@@ -42,13 +42,11 @@ Usage
 In example.py::
 
     from darknetpy.detector import Detector
-    from darknetpy.utils import suppress_stdout_stderr
 
-    with suppress_stdout_stderr():
-        detector = Detector('<absolute-path-to>/darknet',
-                            '<absolute-path-to>/darknet/cfg/coco.data',
-                            '<absolute-path-to>/darknet/cfg/yolo.cfg',
-                            '<absolute-path-to>/darknet/yolo.weights')
+    detector = Detector('<absolute-path-to>/darknet',
+                        '<absolute-path-to>/darknet/cfg/coco.data',
+                        '<absolute-path-to>/darknet/cfg/yolo.cfg',
+                        '<absolute-path-to>/darknet/yolo.weights')
 
     results = detector.detect('<absolute-path-to>/darknet/data/dog.jpg')
 
