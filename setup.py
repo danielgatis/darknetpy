@@ -3,8 +3,12 @@ import re
 import shutil
 import subprocess
 import tempfile
-import urllib.request
 import zipfile
+
+try:
+  import urllib.request as retriver
+except:
+  import urllib as retriver
 
 from setuptools import Extension, find_packages, setup
 from setuptools.command.build_ext import build_ext
@@ -56,7 +60,7 @@ class BuildExtCommand(build_ext):
 
         try:
             if not os.path.exists(darknet_zip_file):
-                urllib.request.urlretrieve(darknet_url, darknet_zip_file)
+                retriver.urlretrieve(darknet_url, darknet_zip_file)
 
             if not os.path.exists(darknet_unziped):
                 with zipfile.ZipFile(darknet_zip_file, 'r') as zip_ref:
