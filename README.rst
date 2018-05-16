@@ -6,6 +6,9 @@ darknetpy is a simple binding for darknet's yolo detector.
 
 Installation
 ============
+
+Works with Python 3.x only.
+
 ::
 
     pip install darknetpy
