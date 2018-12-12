@@ -1,0 +1,14 @@
+[package]
+name = "darknetpy"
+version = "0.0.0"
+build = "build.rs"
+
+[dependencies]
+pyo3 = "0.5.2"
+
+[build-dependencies]
+bindgen = "0.42.2"
+
+[lib]
+name = "darknetpy"
+crate-type = ["cdylib"]

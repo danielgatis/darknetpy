@@ -1,0 +1,10 @@
+include README.rst
+include pyproject.toml
+include Cargo.*
+include build.rs
+
+recursive-include src *
+recursive-include darknetpy *
+
+global-exclude __pycache__
+global-exclude *.py[co]
