@@ -2,18 +2,34 @@
 Darknetpy
 =========
 
-darknetpy is a simple binding for darknet's yolo detector.
+Darknetpy is a simple binding for darknet's yolo detector.
 
 .. image:: https://raw.githubusercontent.com/danielgatis/darknetpy/master/example/example.png
 
 Installation
 ============
 
+Install it from pypi
+
+::
+
+    curl https://sh.rustup.rs -sSf | sh
+
+::
+
+    rustup default nightly
+
 ::
 
     pip install darknetpy
 
-Advanced options
+Install a pre-built binary
+
+::
+
+    pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.0-cp36-cp36m-linux_x86_64.whl
+
+Advanced options (only for pypi installation)
 --------------------
 ::
 
@@ -62,3 +78,16 @@ Runing::
 Result::
 
     [{'right': 194, 'bottom': 353, 'top': 264, 'class': 'dog', 'prob': 0.8198755383491516, 'left': 71}]
+
+Build
+============
+
+On the project root directory
+
+::
+
+    docker pull hoshizora/manylinux1-clang_x86_64
+
+::
+
+    docker run --rm -v `pwd`:/io hoshizora/manylinux1-clang_x86_64 /io/build-wheels.sh

@@ -118,7 +118,8 @@ setup(
     classifiers=[
         'Intended Audience :: Developers',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3'
+        'Programming Language :: Python :: 3',
+        'Operating System :: POSIX :: Linux'
     ],
     packages=['darknetpy'],
     rust_extensions=[RustExtension('darknetpy.darknetpy')],
