@@ -30,7 +30,7 @@ Install a pre-built binary
     pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.1-cp36-cp36m-linux_x86_64.whl
 
 Advanced options (only for pypi installation)
---------------------
+---------------------------------------------
 ::
 
     GPU=1 pip install darknetpy
@@ -56,7 +56,7 @@ to build with OpenCV.
 to build with OpenMP support to accelerate Yolo by using multi-core CPU.
 
 Usage
-====================
+=====
 
 In example.py::
 
@@ -80,7 +80,7 @@ Result::
     [{'right': 194, 'bottom': 353, 'top': 264, 'class': 'dog', 'prob': 0.8198755383491516, 'left': 71}]
 
 Build
-============
+=====
 
 On the project root directory
 
