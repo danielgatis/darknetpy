@@ -3,11 +3,12 @@ name = "darknetpy"
 version = "0.0.0"
 build = "build.rs"
 
-[dependencies]
-pyo3 = "0.5.2"
+[dependencies.pyo3]
+version = "0.9.2"
+features = ["extension-module"]
 
 [build-dependencies]
-bindgen = "0.42.2"
+bindgen = "0.53.2"
 
 [lib]
 name = "darknetpy"

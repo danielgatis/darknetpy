@@ -28,9 +28,9 @@ except ImportError:
 class BuildExtCommand(build_ext):
     def run(self):
         tempdir = tempfile.gettempdir()
-        darknet_url = 'https://github.com/pjreddie/darknet/archive/61c9d02ec461e30d55762ec7669d6a1d3c356fb2.zip'
+        darknet_url = 'https://github.com/pjreddie/darknet/archive/master.zip'
         darknet_zip_file = os.path.join(tempdir, 'darknet.zip')
-        darknet_root = os.path.join(tempdir, 'darknet-61c9d02ec461e30d55762ec7669d6a1d3c356fb2')
+        darknet_root = os.path.join(tempdir, 'darknet-master')
         makefile = os.path.join(darknet_root, 'Makefile')
 
         os.environ['DARKNET_ROOT'] = darknet_root
@@ -108,7 +108,7 @@ install_requires = []
 
 setup(
     name='darknetpy',
-    version='4.0',
+    version='4.1',
     long_description=readme(),
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',

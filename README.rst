@@ -2,7 +2,7 @@
 Darknetpy
 =========
 
-Darknetpy is a simple binding for darknet's yolo detector.
+Darknetpy is a simple binding for darknet's yolo (v4) detector.
 
 .. image:: https://raw.githubusercontent.com/danielgatis/darknetpy/master/example/example.png
 
@@ -27,7 +27,7 @@ Install a pre-built binary
 
 ::
 
-    pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.0-cp36-cp36m-linux_x86_64.whl
+    pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.1-cp36-cp36m-linux_x86_64.whl
 
 Advanced options (only for pypi installation)
 --------------------

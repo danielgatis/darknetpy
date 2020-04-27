@@ -1,6 +1,7 @@
 build
 *.egg-info
-.eggs
+*.eggs
+*.egg
 __pycache__
 tags
 target

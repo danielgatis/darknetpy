@@ -8,7 +8,6 @@
 
 #![feature(specialization)]
 #![feature(proc_macro)]
-#![feature(custom_attribute)]
 
 extern crate pyo3;
 
@@ -23,13 +22,12 @@ include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 struct Detector {
     network: *mut network,
     metadata: metadata,
-    token: PyToken,
 }
 
 #[pymethods]
 impl Detector {
     #[new]
-    fn __new__(obj: &PyRawObject, meta: String, config: String, weights: String) -> PyResult<()> {
+    fn __new__(meta: String, config: String, weights: String) -> Self {
         let metadata = unsafe { get_metadata(CString::new(meta).expect("invalid meta").into_raw()) };
         let network = unsafe {
             load_network(
@@ -39,7 +37,7 @@ impl Detector {
             )
         };
 
-        obj.init(|token| Detector { network, metadata, token })
+        Detector { network, metadata }
     }
 
     fn detect(
@@ -53,7 +51,8 @@ impl Detector {
         let hier_thresh = hier_thresh.unwrap_or(0.50f32);
         let nms = nms.unwrap_or(0.50f32);
 
-        let py = self.token.py();
+        let gil = Python::acquire_gil();
+        let py = gil.python();
 
         unsafe {
             set_batch_network(self.network, 1);
@@ -141,7 +140,7 @@ impl Detector {
     }
 }
 
-#[pymodinit]
+#[pymodule]
 fn darknetpy(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<Detector>()?;
     Ok(())
