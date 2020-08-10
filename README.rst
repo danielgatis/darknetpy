@@ -2,6 +2,17 @@
 Darknetpy
 =========
 
+|Downloads| |DownloadsMonth| |DownloadsWeek|
+
+.. |Downloads| image:: https://pepy.tech/badge/darknetpy
+   :target: https://pepy.tech/project/darknetpy
+
+.. |DownloadsMonth| image:: https://pepy.tech/badge/darknetpy/month
+   :target: https://pepy.tech/project/darknetpy/month
+
+.. |DownloadsWeek| image:: https://pepy.tech/badge/darknetpy/week
+   :target: https://pepy.tech/project/darknetpy/week
+   
 Darknetpy is a simple binding for darknet's yolo (v4) detector.
 
 .. image:: https://raw.githubusercontent.com/danielgatis/darknetpy/master/example/example.png
