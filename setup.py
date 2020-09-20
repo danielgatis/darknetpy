@@ -6,6 +6,8 @@ import tempfile
 import os
 import zipfile
 
+from setuptools.command.build_ext import build_ext
+
 try:
   import urllib.request as retriver
 except:
@@ -14,7 +16,7 @@ except:
 from setuptools import setup
 
 try:
-    from setuptools_rust import RustExtension, build_ext
+    from setuptools_rust import RustExtension
 except ImportError:
     errno = subprocess.call([sys.executable, '-m', 'pip', 'install', 'setuptools-rust'])
 
@@ -22,11 +24,15 @@ except ImportError:
         print('Please install setuptools-rust package')
         raise SystemExit(errno)
     else:
-        from setuptools_rust import RustExtension, build_ext
+        from setuptools_rust import RustExtension
 
 
 class BuildExtCommand(build_ext):
-    def run(self):
+    def finalize_options(self):
+        build_ext.finalize_options(self)
+        self._build_darknet()
+
+    def _build_darknet(self):
         tempdir = tempfile.gettempdir()
         darknet_url = 'https://github.com/pjreddie/darknet/archive/master.zip'
         darknet_zip_file = os.path.join(tempdir, 'darknet.zip')
@@ -63,8 +69,6 @@ class BuildExtCommand(build_ext):
 
         self.library_dirs.append(darknet_root)
         self.libraries.append('darknet')
-
-        build_ext.run(self)
 
 
 def readme():
