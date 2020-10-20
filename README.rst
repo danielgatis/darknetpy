@@ -97,8 +97,4 @@ On the project root directory
 
 ::
 
-    docker pull hoshizora/manylinux1-clang_x86_64
-
-::
-
     docker run --rm -v `pwd`:/io hoshizora/manylinux1-clang_x86_64 /io/build-wheels.sh
