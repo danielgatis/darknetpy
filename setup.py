@@ -112,7 +112,7 @@ install_requires = []
 
 setup(
     name='darknetpy',
-    version='4.1',
+    version='4.2',
     long_description=readme(),
     author='Daniel Gatis Carrazzoni',
     author_email='danielgatis@gmail.com',
