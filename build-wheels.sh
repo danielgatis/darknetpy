@@ -1,16 +1,17 @@
 #!/bin/bash
 set -ex
 
+yum -y install llvm-devel clang
+
 curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
 export PATH="$HOME/.cargo/bin:$PATH"
 
 cd /io
 
-for PYBIN in /opt/python/{cp27-cp27m,cp27-cp27mu,cp35-cp35m,cp36-cp36m,cp37-cp37m}/bin; do
+for PYBIN in /opt/python/{cp35-cp35m,cp36-cp36m,cp37-cp37m}/bin; do
     export PYTHON_SYS_EXECUTABLE="$PYBIN/python"
 
-    "${PYBIN}/pip" install -U setuptools wheel setuptools-rust
-    "${PYBIN}/python" -m pip install wheel==0.31.1 auditwheel==2.0.0
+    "${PYBIN}/pip" install -U pip setuptools wheel setuptools-rust auditwheel
     "${PYBIN}/python" setup.py bdist_wheel
 done
 

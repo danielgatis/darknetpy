@@ -12,7 +12,7 @@ Darknetpy
 
 .. |DownloadsWeek| image:: https://pepy.tech/badge/darknetpy/week
    :target: https://pepy.tech/project/darknetpy/week
-   
+
 Darknetpy is a simple binding for darknet's yolo (v4) detector.
 
 .. image:: https://raw.githubusercontent.com/danielgatis/darknetpy/master/example/example.png
@@ -97,8 +97,8 @@ On the project root directory
 
 ::
 
-    docker run --rm -v `pwd`:/io hoshizora/manylinux1-clang_x86_64 /io/build-wheels.sh
- 
+    docker run --rm -v `pwd`:/io quay.io/pypa/manylinux2010_x86_64 /io/build-wheels.sh
+
 Buy me a coffee
 ===============
 
