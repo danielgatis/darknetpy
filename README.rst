@@ -98,3 +98,13 @@ On the project root directory
 ::
 
     docker run --rm -v `pwd`:/io hoshizora/manylinux1-clang_x86_64 /io/build-wheels.sh
+ 
+Buy me a coffee
+===============
+
+Liked some of my work? Buy me a coffee (or more likely a beer)
+
+|BuyMeACoffee|
+
+.. |BuyMeACoffee| image:: https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png
+   :target: https://www.buymeacoffee.com/danielgatis
