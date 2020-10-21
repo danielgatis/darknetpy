@@ -38,7 +38,7 @@ Install a pre-built binary
 
 ::
 
-    pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.1-cp36-cp36m-linux_x86_64.whl
+    pip install https://github.com/danielgatis/darknetpy/raw/master/dist/darknetpy-4.2-cp37-cp37m-linux_x86_64.whl
 
 Advanced options (only for pypi installation)
 ---------------------------------------------
